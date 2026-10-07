@@ -1,0 +1,73 @@
+from pathlib import Path
+from cascade.cascade import Cascade
+
+data_dir = Path(__file__).parent
+
+elevation_files = [
+    'segment_001_1_elevation.npy',
+    'segment_002_2_elevation.npy',
+    'segment_003_3_elevation.npy',
+    'segment_004_4_elevation.npy',
+    'segment_005_5_elevation.npy',
+    'segment_006_6_elevation.npy',
+    'segment_007_7_elevation.npy',
+    'segment_008_8_elevation.npy',
+    'segment_009_9_elevation.npy',
+    'segment_010_10_elevation.npy',
+    'segment_011_11_elevation.npy',
+    'segment_012_12_elevation.npy',
+    'segment_013_13_elevation.npy',
+    'segment_014_14_elevation.npy',
+    'segment_015_15_elevation.npy',
+    'segment_016_16_elevation.npy',
+    'segment_017_17_elevation.npy',
+    'segment_018_18_elevation.npy',
+    'segment_019_19_elevation.npy',
+    'segment_020_20_elevation.npy',
+    'segment_021_21_elevation.npy',
+    'segment_022_22_elevation.npy',
+    'segment_023_23_elevation.npy',
+    'segment_024_24_elevation.npy',
+    'segment_025_25_elevation.npy',
+    'segment_026_26_elevation.npy',
+    'segment_027_27_elevation.npy',
+    'segment_028_28_elevation.npy',
+    'segment_029_29_elevation.npy',
+    'segment_030_30_elevation.npy',
+    'segment_031_31_elevation.npy',
+    'segment_032_32_elevation.npy',
+    'segment_033_33_elevation.npy',
+    'segment_034_34_elevation.npy',
+    'segment_035_35_elevation.npy',
+    'segment_036_36_elevation.npy',
+    'segment_037_37_elevation.npy',
+    'segment_038_38_elevation.npy',
+    'segment_039_39_elevation.npy',
+    'segment_040_40_elevation.npy',
+    'segment_041_41_elevation.npy',
+    'segment_042_42_elevation.npy',
+    'segment_043_43_elevation.npy',
+    'segment_044_44_elevation.npy',
+    'segment_045_45_elevation.npy',
+    'segment_046_46_elevation.npy',
+    'segment_047_47_elevation.npy',
+    'segment_048_48_elevation.npy',
+    'segment_049_49_elevation.npy',
+    'segment_050_50_elevation.npy',
+    'segment_051_51_elevation.npy',
+    'segment_052_52_elevation.npy',
+    'segment_053_53_elevation.npy',
+]
+
+cascade = Cascade(
+    datadir=str(data_dir),
+    name="terschelling_run",
+    elevation_file=elevation_files,
+    alongshore_section_count=53,
+    time_step_count=10,
+    num_cores=1,
+    outwash_module=False,
+)
+
+print("CASCADE initialized successfully.")
+print("Barrier3D sections:", len(cascade.barrier3d))
