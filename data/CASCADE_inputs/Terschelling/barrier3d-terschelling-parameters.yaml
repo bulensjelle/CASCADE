@@ -32,7 +32,7 @@ Qs_min: 1.0
 Qshrub_max: 0.15
 RSLR_Constant: true
 RSLR_const: 0.002
-Rat: 1.4
+Rat: 1.3
 Rin_i: 0.1
 Rin_r: 2.0
 SalineLimit: 5
